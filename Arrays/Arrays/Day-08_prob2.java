@@ -1,0 +1,34 @@
+
+//Armstrong Number(Geeksforgeeks)
+
+
+
+// User function Template for Java
+class Solution {
+    static boolean armstrongNumber(int n) {
+        // code here
+        
+        int original = n;
+        int digits = 0;
+        int temp = n;
+
+      
+        while (temp > 0) {
+            digits++;
+            temp = temp / 10;
+        }
+
+        int sum = 0;
+        temp = n;
+
+        while (temp > 0) {
+            int digit = temp % 10;
+            sum += Math.pow(digit, digits);
+            temp = temp / 10;
+        }
+
+        return sum == original;
+  
+        
+    }
+}
